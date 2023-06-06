@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75898C212A28DF9700093B86 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C202A28DF9700093B86 /* main.swift */; };
+		75898C342A28E74B00093B86 /* Commands in Frameworks */ = {isa = PBXBuildFile; productRef = 75898C332A28E74B00093B86 /* Commands */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75898C342A28E74B00093B86 /* Commands in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = processTest;
+			packageProductDependencies = (
+				75898C332A28E74B00093B86 /* Commands */,
+			);
 			productName = processTest;
 			productReference = 75898C1D2A28DF9700093B86 /* processTest */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = 75898C142A28DF9700093B86;
+			packageReferences = (
+				75898C322A28E74B00093B86 /* XCRemoteSwiftPackageReference "swift-commands" */,
+			);
 			productRefGroup = 75898C1E2A28DF9700093B86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +292,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75898C322A28E74B00093B86 /* XCRemoteSwiftPackageReference "swift-commands" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QiuZhiFei/swift-commands.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75898C332A28E74B00093B86 /* Commands */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75898C322A28E74B00093B86 /* XCRemoteSwiftPackageReference "swift-commands" */;
+			productName = Commands;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75898C152A28DF9700093B86 /* Project object */;
 }
