@@ -6,21 +6,22 @@
 //
 
 import Foundation
+import Commands
 
 print("Hello, World!")
 
 let filemgr = FileManager.default
 
-let processPath = URL(fileURLWithPath: "C:\\Users\\edell\\Dev\\Pearson\\SFDX2\\TestProject")
+let processPath = URL(fileURLWithPath: "/Users/uellied/Dev/Pearson/SFDX2/TestProject")
 
-filemgr.changeCurrentDirectoryPath("C:\\Users\\edell\\Dev\\Pearson\\SFDX2\\TestProject")
+filemgr.changeCurrentDirectoryPath("/Users/uellied/Dev/Pearson/SFDX2/TestProject")
 
 print("Current Directory: \(filemgr.currentDirectoryPath)")
 
 let pipe = Pipe()
 
 let process = Process()
-process.executableURL = URL(fileURLWithPath:"C:\\Program Files\\sfdx\\bin\\sf.cmd")
+process.executableURL = URL(fileURLWithPath:"/usr/local/bin/sf")
 process.arguments = ["project", "retrieve", "start", "--metadata", "CustomObject:Account"]
 process.currentDirectoryURL = processPath
 process.standardOutput = pipe

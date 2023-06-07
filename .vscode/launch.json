@@ -1,0 +1,52 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug processTest",
+            "program": "${workspaceFolder:processTest}\\.build/debug/processTest",
+            "args": [],
+            "cwd": "${workspaceFolder:processTest}",
+            "preLaunchTask": "swift: Build Debug processTest"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release processTest",
+            "program": "${workspaceFolder:processTest}\\.build/release/processTest",
+            "args": [],
+            "cwd": "${workspaceFolder:processTest}",
+            "preLaunchTask": "swift: Build Release processTest"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug Examples",
+            "program": "${workspaceFolder:processTest}\\.build/debug/Examples",
+            "args": [],
+            "cwd": "${workspaceFolder:processTest}",
+            "preLaunchTask": "swift: Build Debug Examples"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release Examples",
+            "program": "${workspaceFolder:processTest}\\.build/release/Examples",
+            "args": [],
+            "cwd": "${workspaceFolder:processTest}",
+            "preLaunchTask": "swift: Build Release Examples"
+        }
+    ]
+}
